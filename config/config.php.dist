@@ -1,0 +1,14 @@
+<?php
+return [
+    'websocketServer' => [
+        'host' => 'stdout.online',
+        'port' => 10661,
+        'timeout' => 30,
+        'local_cert' => '/path/to/your/fullchain.pem',
+        'local_pk' => '/path/to/your/privkey.pem'
+    ],
+    'tcpServer' => [
+        'port' => 10660,
+        'timeout' => 30
+    ]
+];

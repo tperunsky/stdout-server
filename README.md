@@ -13,7 +13,7 @@ Current layout
 - test-sender.php - A simple script which generates a bunch of test log messages. 
 
 In short, messages are routed like this: 
-Client (test-sender.php or any other program) -> TCP server (tcp-server.php) -> WebSocket server (ws-server.php) -> Browser (stdout-ui)
+Client (test-sender.php or any other program) -> TCP server (tcp-server.php) -> WebSocket server (ws-server.php) -> Browser ([stdout-ui](https://github.com/tperunsky/stdout-ui))
 
 To test, run 
 `php tcp-server.php`

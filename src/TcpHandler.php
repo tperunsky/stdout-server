@@ -26,13 +26,12 @@ class TcpHandler implements MessageComponentInterface
     /**
      * Triggered when a message is received on an existing connection
      * @param ConnectionInterface $conn
-     * @param string $m
+     * @param string $m json object with m and s keys - one for message, one for session id, eg {"m":"Hi',"s":"123"}
      * @throws Throwable
      */
     public function onMessage(ConnectionInterface $conn, $m)
     {
         /** @var $conn IoConnection */
-        /** @var $client IoConnection */
 
         if ($this->isTelnetActiveNegotiationSequence($m)) {
             return; //skip Telnet control sequence gibberish
